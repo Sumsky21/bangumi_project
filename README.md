@@ -12,6 +12,10 @@ Assignment of Knowledge Graph (B3I062220)
 
 2、基于知识图谱的问答系统构建
 
+# 项目环境需求
+
+python3, jieba, fuzzywuzzy, py2neo, OpenCC, collections
+
 # 项目使用方式
 
 QAmain.py文件是问答系统的入口，直接python运行即可进入交互式问答界面。
