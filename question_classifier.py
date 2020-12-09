@@ -94,6 +94,7 @@ class QClassifier:
         selected_anime = []
         selected_staff = []
         maybe = []
+        maybe_s = []
         for keyword in keywords:
             p_anime_list = process.extractOne(keyword, self.anime_list)
             p_staff_list = process.extractOne(keyword, self.staff_list)
