@@ -47,7 +47,7 @@ class ASearcher:
                         anime_re[a_name] = int(favor[i])
             anime_dict = dict(collections.Counter(anime_re))
             anime_dict = sorted(anime_dict.items(), key=lambda d: (d[1], d[0]), reverse=True)
-            print(anime_dict)
+#             print(anime_dict)
             final_answer = self.answer_prettify(question_type, anime_dict[:self.num_limit])
             if final_answer:
                 final_answers.append(final_answer)
