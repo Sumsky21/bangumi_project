@@ -94,7 +94,6 @@ class QClassifier:
         selected_anime = []
         selected_staff = []
         maybe = []
-        maybe_s = []
         for keyword in keywords:
             p_anime_list = process.extractOne(keyword, self.anime_list)
             p_staff_list = process.extractOne(keyword, self.staff_list)
@@ -105,7 +104,7 @@ class QClassifier:
                 if fuzz.partial_ratio(p_anime_list[0], question) > 50:
                     selected_anime.append(p_anime_list[0])
             if p_staff_list[1] >= 70:
-                maybe_s.append(p_staff_list[0])
+                maybe.append(p_staff_list[0])
                 if fuzz.partial_ratio(p_staff_list[0], question) > 50:
                     selected_staff.append(p_staff_list[0])
         if not (selected_anime or selected_staff):

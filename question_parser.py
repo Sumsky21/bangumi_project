@@ -46,9 +46,9 @@ class QParser:
         elif feature_type == 'tempo':
             sql = ["match (s:staff)-[r]->(a:anime) where a.name='{0}' and (r.job='系列构成' or r.job='监督') return s.name, s.收藏数".format(i) for i in entities]
         elif feature_type == 'casting':
-            sql = ["match (s:cast)-[r]->(a:anime) where a.name='{0}' return s.name".format(i) for i in entities]
+            sql = ["match (s:cast)-[r]->(a:anime) where a.name='{0}' return s.name, s.收藏数".format(i) for i in entities]
         elif feature_type == 'others':
-            sql = ["match (s:staff)-[r]->(a:anime) where a.name='{0}' return s.name".format(i) for i in entities]
+            sql = ["match (s:staff)-[r]->(a:anime) where a.name='{0}' and (r.job='原作' or r.job='监督') return s.name, s.收藏数".format(i) for i in entities]
         return sql
 
 if __name__ == '__main__':
