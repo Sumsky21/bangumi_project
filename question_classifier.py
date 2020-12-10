@@ -39,10 +39,11 @@ class QClassifier:
     
     def classify(self, question):
         data = {}
-        region_dict, selected_anime = self.check_dict(question)
+        flag = False        # 表示是否需要反问
+        region_dict, selected_anime, flag = self.check_dict(question)
         set_anime = set(selected_anime)
         if not region_dict:
-            return {}
+            return {}, {}, False    # 此处处理方式待定
         data['args'] = region_dict
         types = []
         for type_ in region_dict.values():
@@ -74,7 +75,7 @@ class QClassifier:
         if feature_type == 'others':
             feature_types.append(feature_type)
         data['feature_types'] = feature_types
-        return data, set_anime
+        return data, set_anime, flag
 
     def build_wdtype_dict(self):
         wd_dict = dict()
@@ -88,7 +89,7 @@ class QClassifier:
     
     def check_dict(self, question):
         txt_cut = "/".join(jieba.cut(cc.convert(question)))
-
+        askFlag = False
         top = int(len(txt_cut)/3)
         keywords = jieba.analyse.extract_tags(question, topK=top)
         selected_anime = []
@@ -109,16 +110,18 @@ class QClassifier:
                     selected_staff.append(p_staff_list[0])
         if not (selected_anime or selected_staff):
             check = []
-            for i in maybe:
+            # 如果需要反问则直接将待选列表maybe和askFlag返回
+            askFlag = True
+            '''for i in maybe:
                 ask = "请问您说的是{0}吗？(是/否）\n".format(i)
                 check = input(ask)
                 if check=='否':
-                    maybe.remove(i)
+                    maybe.remove(i)'''
             selected = maybe
         else:
             selected = selected_anime+selected_staff
         region_dict = {i:self.wdtype_dict.get(i) for i in selected}
-        return region_dict, selected
+        return region_dict, selected, askFlag
 
     def check_words(self, wds, question):
         for wd in wds:

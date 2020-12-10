@@ -11,10 +11,13 @@ class BangumiGraph:
         self.searcher = ASearcher()
         # print("searcher initiate succeessfully!")
 
-    def answer_main(self, question):
+    def question_classify(self, question):
+        # ask_flag为True表示需要反问
+        Qtype, set_anime, ask_flag = self.classifier.classify(question)
+        return Qtype, set_anime, ask_flag
+        
+    def continue_answer(self, Qtype, set_anime):
         ans = '自己百度'
-        Qtype, set_anime = self.classifier.classify(question)
-        # print("classify done!")
         if not Qtype:
             return ans
         Qsql = self.parser.parser_main(Qtype)
