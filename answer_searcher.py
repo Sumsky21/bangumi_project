@@ -61,30 +61,30 @@ class ASearcher:
         if feature_type == 'painting':
             # print(answers)
             desc = [i[0] for i in answers]
-            final_answer = '我推荐的类似画风的动画有：{0}'.format('、'.join(list(desc)))
+            final_answer = '我推荐的类似画风的动画有：{0}'.format('\n'.join(list(desc)))
         if feature_type == 'plot':
             # print(answers)
             desc = [i[0] for i in answers]
-            final_answer = '我推荐的类似剧情的动画有：{0}'.format('、'.join(list(desc)))
+            final_answer = '我推荐的类似剧情的动画有：{0}'.format('\n'.join(list(desc)))
         if feature_type == 'music':
             # print(answers)
             desc = [i[0] for i in answers]
-            final_answer = '我推荐的配乐也很赞的动画有：{0}'.format('、'.join(list(desc)))
+            final_answer = '我推荐的配乐也很赞的动画有：{0}'.format('\n'.join(list(desc)))
         if feature_type == 'effect':
             # print(answers)
             desc = [i[0] for i in answers]
-            final_answer = '我推荐的特效也很酷的动画有：{0}'.format('、'.join(list(desc)))
+            final_answer = '我推荐的特效也很酷的动画有：{0}'.format('\n'.join(list(desc)))
         if feature_type == 'sakuga':
             # print(answers)
             desc = [i[0] for i in answers]
-            final_answer = '我推荐的作画也很爆炸的动画有：{0}'.format('、'.join(list(desc)))
+            final_answer = '我推荐的作画也很爆炸的动画有：{0}'.format('\n'.join(list(desc)))
         if feature_type == 'casting':
             # print(answers)
             desc = [i[0] for i in answers]
-            final_answer = '我推荐的配音也很精彩的动画有：{0}'.format('、'.join(list(desc)))
+            final_answer = '我推荐的配音也很精彩的动画有：{0}'.format('\n'.join(list(desc)))
         if feature_type == 'others':
             desc = [i[0] for i in answers]
-            final_answer = '我推荐类似动画有：{0}'.format('、'.join(list(desc)))
+            final_answer = '我推荐类似动画有：{0}'.format('\n'.join(list(desc)))
         return final_answer
 
 
