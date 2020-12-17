@@ -4,8 +4,8 @@ import json
 import time
 
 data = {
-    'task': 0,
-    'q': '我喜欢三月的狮子这种剧情向的'
+    "task": 0,
+    "q": '黑色魔法'
     # 'qtype': {'args': {'JOJO的奇妙冒险 星尘斗士 埃及篇': ['anime'], 'Joao': ['staff']}, 'feature_types': ['others']},
     # 'anime_list': ['JOJO的奇妙冒险 星尘斗士 埃及篇']
 }

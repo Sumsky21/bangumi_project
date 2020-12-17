@@ -9,12 +9,12 @@ import os
 app = Flask(__name__)
 g = BangumiGraph()
 
-handler = RotatingFileHandler(os.path.join(app.root_path, 'logs', 'error_log.log'), maxBytes=102400, backupCount=10)
+'''handler = RotatingFileHandler(os.path.join(app.root_path, 'logs', 'error_log.log'), maxBytes=102400, backupCount=10)
 logging_format = logging.Formatter(
     '%(asctime)s - %(levelname)s - %(filename)s - %(funcName)s - %(lineno)s - %(message)s')
 
 handler.setFormatter(logging_format)
-app.logger.addHandler(handler)
+app.logger.addHandler(handler)'''
 
 @app.route('/api', methods=['get', 'post'])
 def hello_world():
@@ -26,7 +26,7 @@ def hello_world():
     task=1：反问并选择后回答；
             正常返回答案的response_type为0
     '''
-    r = request.get_json()      # 本地测试需要在表达式右侧外面套一层json.loads()
+    r = json.loads(request.get_json())      # 本地测试需要在表达式右侧外面套一层json.loads()
     task = r["task"]
     if task == 0:
         question = r["q"]
@@ -41,10 +41,10 @@ def hello_world():
     response = {'rtype': 0, 'answer': ans}
     return jsonify(response)
 
-@app.errorhandler(500)
+'''@app.errorhandler(500)
 def special_exception_handler(error):
     app.logger.error(error)
-    return '500 error', 500
+    return '500 error', 500'''
 
 
 if __name__ == '__main__':
