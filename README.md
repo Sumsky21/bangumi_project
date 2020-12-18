@@ -50,3 +50,14 @@ Question_parser.py：对不同类问题进行分类转换，生成对应的查�
 Answer_searcher.py：对知识图谱进行查询，并对返回结果进行处理
 
 Preprocess.py：对知识图谱中的信息进行处理，生成领域特定字典，用于问答系统中进行匹配
+
+# testapi.py本地测试接口
+* 运行main.py，观察到控制台出现如下输出，代表flask应用在本地启动成功：
+  ```
+  ...
+   * Debugger is active!
+   * Debugger PIN: 283-755-850
+   * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+  ```
+* 新开一个终端，修改testapi.py中发送的数据，运行testapi.py，等待控制台输出结果
+* 如果testapi.py终端报错，可以前往运行main.py的终端，查看接口端的报错信息和位置
