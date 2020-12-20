@@ -41,6 +41,10 @@ def hello_world():
     response = {'rtype': 0, 'answer': ans}
     return jsonify(response)
 
+@app.route('/api/seeErrorlog', methods=['get', 'post'])
+def printErrorlog():
+    return send_from_directory('./logs', 'error_log.log', as_attachment=True)
+
 '''@app.errorhandler(500)
 def special_exception_handler(error):
     app.logger.error(error)

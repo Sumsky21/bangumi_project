@@ -52,12 +52,5 @@ Answer_searcher.py：对知识图谱进行查询，并对返回结果进行处�
 Preprocess.py：对知识图谱中的信息进行处理，生成领域特定字典，用于问答系统中进行匹配
 
 # testapi.py本地测试接口
-* 运行main.py，观察到控制台出现如下输出，代表flask应用在本地启动成功：
-  ```
-  ...
-   * Debugger is active!
-   * Debugger PIN: 283-755-850
-   * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
-  ```
-* 新开一个终端，修改testapi.py中发送的数据，运行testapi.py，等待控制台输出结果
-* 如果testapi.py终端报错，可以前往运行main.py的终端，查看接口端的报错信息和位置
+* 修改testapi.py中发送的数据，运行testapi.py，等待控制台输出结果
+* 如果testapi.py终端报错，可以访问 https://sumsky.xyz:5000/api/seeErrorlog 下载错误日志，日志文件中保存所有500 exception导致控制台输出的错误信息，可以根据请求时间查看对应信息。
