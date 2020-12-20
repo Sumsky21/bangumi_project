@@ -1,8 +1,8 @@
 import os
 import jieba
 import jieba.analyse
-from fuzzywuzzy import fuzz
-from fuzzywuzzy import process
+from rapidfuzz import fuzz
+from rapidfuzz import process
 from opencc import OpenCC
 
 cc = OpenCC('t2s')
