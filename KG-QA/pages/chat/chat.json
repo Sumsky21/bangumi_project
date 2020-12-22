@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "mp-loading": "weui-miniprogram/loading/loading",
+    "mp-dialog": "weui-miniprogram/dialog/dialog"
+  },
+  "navigationBarTitleText": "Bangumi_KG Bot",
+  "navigationBarBackgroundColor": "#FF649E",
+  "navigationBarTextStyle": "white",
+  "styleIsolation": "shared"
+}

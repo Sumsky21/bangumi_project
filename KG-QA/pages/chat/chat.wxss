@@ -1,0 +1,105 @@
+/* pages/chat/chat.wxss */
+page {
+    background-color: #f1f1f1;
+}
+
+.inputRoom {
+width: 100vw;
+height: 16vw;
+border-top: 1px solid #cdcdcd;
+background-color: #f1f1f1;
+position: fixed;
+bottom: 0;
+display: flex;
+align-items: center;
+z-index: 20;
+box-shadow: 0rpx -3rpx 10rpx #cdcdcd;
+border-radius: 30rpx 30rpx 0 0;
+}
+
+input {
+width: 76vw;
+height: 9.33vw;
+background-color: #fff;
+border-radius: 40rpx;
+margin-left: 2vw;
+padding: 0 3vw;
+font-size: 28rpx;
+color: #444;
+}
+
+.leftMsg {
+font-size: 35rpx;
+color: #444;
+line-height: 7vw;
+padding: 2vw 2.5vw;
+background-color: #fff;
+margin-left: -1.6vw;
+border-radius: 10rpx;
+z-index: 10;
+display: flex;
+align-items: center;
+flex-wrap: wrap;
+}
+
+.rightMsg {
+font-size: 35rpx;
+color: #444;
+line-height: 7vw;
+padding: 2vw 2.5vw;
+background-color: #96EB6A;
+margin-right: -1.6vw;
+border-radius: 10rpx;
+z-index: 10;
+}
+
+.demo0{
+    width: 90rpx;
+    vertical-align: middle;
+}
+
+.whoiam {
+    border: none;
+    width: fit-content;
+    justify-content: left;
+    padding: 0 0 0 0;
+    font-weight: bold;
+    margin: 6rpx 6rpx;
+    color: #f05f94;
+}
+.whoiam_hover {
+    background-color: #cccccc;
+}
+
+.client_init{
+    opacity: 0;
+    animation: enter 0.5s forwards;
+    -webkit-animation: enter 0.5s forwards;
+}
+
+.server_init{
+    opacity: 0;
+    animation: enter 0.5s 0.3s forwards;
+    -webkit-animation: enter 0.5s 0.3s forwards;
+}
+
+@keyframes enter {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@-webkit-keyframes enter {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
