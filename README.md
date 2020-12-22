@@ -43,7 +43,7 @@ Prefix dict has been built successfully.
 ```
 
 ## 小程序问答
-![rD8QoV.png](https://s3.ax1x.com/2020/12/22/rD8QoV.png)
+![rD8QoV.md.png](https://s3.ax1x.com/2020/12/22/rD8QoV.md.png)
 
 # 项目结构
 
