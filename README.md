@@ -1,6 +1,7 @@
 # Bangumi Project
 
-Assignment of Knowledge Graph (B3I062220)
+Group-work Assignment of *Knowledge Graph* (B3I062220)  
+By: @xinobu, @Braini-X and @Sumsky21
 
 # 项目介绍
 
@@ -10,7 +11,7 @@ Assignment of Knowledge Graph (B3I062220)
 
 1、基于动画论坛网站bangumi.tv的知识图谱构建
 
-2、基于知识图谱的问答系统构建
+2、基于知识图谱的问答系统构建并封装flask API
 
 3、“Bangumi_KG Bot”问答小程序
 
@@ -23,12 +24,12 @@ python3, jieba, rapidfuzz, py2neo, OpenCC
 ## 命令行问答
 QAmain.py文件是问答系统的入口，直接python运行即可进入交互式问答界面。
 
-```python QAmain.py```
+```python QAmain-old.py```
 
 目前只支持根据动画名和动画特点的推荐，例如：
 
 ```python
-python QAmain.py
+python QAmain-old.py
 Building prefix dict from the default dictionary ...
 Loading model from cache /var/folders/25/18x6nkyn7g115gdsjybdg3rr0000gp/T/jieba.cache
 Loading model cost 0.988 seconds.
