@@ -7,8 +7,8 @@ class ASearcher:
         self.g = py2neo.Graph(
             host = "sumsky.xyz",
             http_port = 7474,
-            user = "neo4j",
-            password = "bangumi-buaa"
+            user = "neo4j",             # Here should be your Neo4j username
+            password = "************"   # Here should be your Neo4j password
         )
         self.num_limit = 7
 
