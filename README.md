@@ -12,12 +12,15 @@ Assignment of Knowledge Graph (B3I062220)
 
 2、基于知识图谱的问答系统构建
 
+3、“Bangumi_KG Bot”问答小程序
+
 # 项目环境需求
 
-python3, jieba, fuzzywuzzy, py2neo, OpenCC, collections
+python3, jieba, rapidfuzz, py2neo, OpenCC
 
 # 项目使用方式
 
+## 命令行问答
 QAmain.py文件是问答系统的入口，直接python运行即可进入交互式问答界面。
 
 ```python QAmain.py```
@@ -39,7 +42,12 @@ Prefix dict has been built successfully.
 我推荐的作画也很爆炸的动画有：AMON 恶魔人默示录、星际牛仔、血界战线 王者餐厅的王者、老人Z、巴哈姆特之怒 GENESIS、Daicon4 开幕动画、东京喰种 JACK
 ```
 
+## 小程序问答
+![rD8QoV.png](https://s3.ax1x.com/2020/12/22/rD8QoV.png)
+
 # 项目结构
+
+/KG-QA：小程序源码
 
 QAmain.py：问答系统总入口，接收用户输入，返回推荐
 
