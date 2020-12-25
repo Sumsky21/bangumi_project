@@ -50,6 +50,10 @@ Prefix dict has been built successfully.
 
 /KG-QA：小程序源码
 
+/crawl：爬虫部分源码
+
+main.py：API入口
+
 QAmain.py：问答系统总入口，接收用户输入，返回推荐
 
 Question_classifier.py：对问题进行关键词提取和分类
@@ -60,6 +64,6 @@ Answer_searcher.py：对知识图谱进行查询，并对返回结果进行处�
 
 Preprocess.py：对知识图谱中的信息进行处理，生成领域特定字典，用于问答系统中进行匹配
 
-# testapi.py本地测试接口
+testapi.py：本地测试API程序
 * 修改testapi.py中发送的数据，运行testapi.py，等待控制台输出结果
 * 如果testapi.py终端报错，可以访问 https://sumsky.xyz:5000/api/seeErrorlog 下载错误日志，日志文件中保存所有500 exception导致控制台输出的错误信息，可以根据请求时间查看对应信息。
