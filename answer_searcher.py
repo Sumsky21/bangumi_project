@@ -5,7 +5,7 @@ import collections
 class ASearcher:
     def __init__(self):
         self.g = py2neo.Graph(
-            host = "sumsky.xyz",
+            host = "sumsky.top",
             http_port = 7474,
             user = "neo4j",
             password = "bangumi-buaa"

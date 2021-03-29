@@ -14,7 +14,7 @@ App({
     })
     //激活应用后端
     wx.request({
-      url: 'https://sumsky.xyz:5000/api/invoke',
+      url: 'https://sumsky.top:5000/api/invoke',
       data: {},
       method: 'GET',
       timeout: 60000, 

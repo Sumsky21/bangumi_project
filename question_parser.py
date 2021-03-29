@@ -34,21 +34,21 @@ class QParser:
         # 查询语句
         sql = []
         if feature_type == 'painting':
-            sql = ["match (s:staff)-[r]->(a:anime) where a.name='{0}' and (r.job='人物设定' or r.job='原作' or r.job='美术监督') return s.name, s.收藏数".format(i) for i in entities]
+            sql = ["match (s:stuff)-[r]->(a:anime) where a.name='{0}' and (r.job='人物设定' or r.job='原作' or r.job='美术监督') return s.name, s.收藏数".format(i) for i in entities]
         elif feature_type == 'plot':
-            sql = ["match (s:staff)-[r]->(a:anime) where a.name='{0}' and (r.job='原作') return s.name, s.收藏数".format(i) for i in entities]
+            sql = ["match (s:stuff)-[r]->(a:anime) where a.name='{0}' and (r.job='原作') return s.name, s.收藏数".format(i) for i in entities]
         elif feature_type == 'music':
-            sql = ["match (s:staff)-[r]->(a:anime) where a.name='{0}' and r.job='音乐' return s.name, s.收藏数".format(i) for i in entities]
+            sql = ["match (s:stuff)-[r]->(a:anime) where a.name='{0}' and r.job='音乐' return s.name, s.收藏数".format(i) for i in entities]
         elif feature_type == 'sakuga':
-            sql = ["match (s:staff)-[r]->(a:anime) where a.name='{0}' and (r.job='原画' or r.job='作画监督') return s.name, s.收藏数".format(i) for i in entities]
+            sql = ["match (s:stuff)-[r]->(a:anime) where a.name='{0}' and (r.job='原画' or r.job='作画监督') return s.name, s.收藏数".format(i) for i in entities]
         elif feature_type == 'effect':
-            sql = ["match (s:staff)-[r]->(a:anime) where a.name='{0}' and r.job='摄影监督' return s.name, s.收藏数".format(i) for i in entities]
+            sql = ["match (s:stuff)-[r]->(a:anime) where a.name='{0}' and r.job='摄影监督' return s.name, s.收藏数".format(i) for i in entities]
         elif feature_type == 'tempo':
-            sql = ["match (s:staff)-[r]->(a:anime) where a.name='{0}' and (r.job='系列构成' or r.job='监督') return s.name, s.收藏数".format(i) for i in entities]
+            sql = ["match (s:stuff)-[r]->(a:anime) where a.name='{0}' and (r.job='系列构成' or r.job='监督') return s.name, s.收藏数".format(i) for i in entities]
         elif feature_type == 'casting':
             sql = ["match (s:cast)-[r]->(a:anime) where a.name='{0}' return s.name, s.收藏数".format(i) for i in entities]
         elif feature_type == 'others':
-            sql = ["match (s:staff)-[r]->(a:anime) where a.name='{0}' and (r.job='原作' or r.job='监督') return s.name, s.收藏数".format(i) for i in entities]
+            sql = ["match (s:stuff)-[r]->(a:anime) where a.name='{0}' and (r.job='原作' or r.job='监督') return s.name, s.收藏数".format(i) for i in entities]
         return sql
 
 if __name__ == '__main__':

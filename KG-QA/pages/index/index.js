@@ -21,7 +21,7 @@ Page({
   sendRequest: function (e) {
     var that = this
     var query = that.data.query
-    var queryUrl = 'https://sumsky.xyz:5000/api?q=' + query
+    var queryUrl = 'https://sumsky.top:5000/api?q=' + query
     wx.request({
       url: queryUrl,
       data:{},

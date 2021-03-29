@@ -139,7 +139,7 @@ Page({
       "task": 0,
       "q": question
     }
-    var queryUrl = 'https://sumsky.xyz:5000/api'
+    var queryUrl = 'https://sumsky.top:5000/api'
     msgList.push({
       speaker: 'customer',
       contentType: 'text',
@@ -243,7 +243,7 @@ Page({
     console.log(promiseArr)
     Promise.all(promiseArr).then(res => {
       console.log(animes)
-      var queryUrl = 'https://sumsky.xyz:5000/api'
+      var queryUrl = 'https://sumsky.top:5000/api'
       var query = {
         "task": 1,
         "qtype": qtype,

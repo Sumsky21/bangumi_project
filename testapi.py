@@ -10,7 +10,7 @@ data = {
     # 'anime_list': ['JOJO的奇妙冒险 星尘斗士 埃及篇']
 }
 r = requests.post(
-    url='https://sumsky.xyz:5000/api',
+    url='https://sumsky.top:5000/api',
     json=data
 )
 print(json.loads(r.text))   # 响应内容
