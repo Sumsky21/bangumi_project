@@ -1,6 +1,7 @@
 # Bangumi Project
 
-Assignment of Knowledge Graph (B3I062220)
+Group-work Assignment of *Knowledge Graph* (B3I062220)  
+By: @xinobu, @Braini-X and @Sumsky21
 
 # 项目介绍
 
@@ -10,7 +11,7 @@ Assignment of Knowledge Graph (B3I062220)
 
 1、基于动画论坛网站bangumi.tv的知识图谱构建
 
-2、基于知识图谱的问答系统构建
+2、基于知识图谱的问答系统构建并封装flask API
 
 3、“Bangumi_KG Bot”问答小程序
 
@@ -23,12 +24,12 @@ python3, jieba, rapidfuzz, py2neo, OpenCC
 ## 命令行问答
 QAmain.py文件是问答系统的入口，直接python运行即可进入交互式问答界面。
 
-```python QAmain.py```
+```python QAmain-old.py```
 
 目前只支持根据动画名和动画特点的推荐，例如：
 
 ```python
-python QAmain.py
+python QAmain-old.py
 Building prefix dict from the default dictionary ...
 Loading model from cache /var/folders/25/18x6nkyn7g115gdsjybdg3rr0000gp/T/jieba.cache
 Loading model cost 0.988 seconds.
@@ -49,6 +50,10 @@ Prefix dict has been built successfully.
 
 /KG-QA：小程序源码
 
+/crawl：爬虫部分源码
+
+main.py：API入口
+
 QAmain.py：问答系统总入口，接收用户输入，返回推荐
 
 Question_classifier.py：对问题进行关键词提取和分类
@@ -59,6 +64,6 @@ Answer_searcher.py：对知识图谱进行查询，并对返回结果进行处�
 
 Preprocess.py：对知识图谱中的信息进行处理，生成领域特定字典，用于问答系统中进行匹配
 
-# testapi.py本地测试接口
+testapi.py：本地测试API程序
 * 修改testapi.py中发送的数据，运行testapi.py，等待控制台输出结果
 * 如果testapi.py终端报错，可以访问 https://sumsky.xyz:5000/api/seeErrorlog 下载错误日志，日志文件中保存所有500 exception导致控制台输出的错误信息，可以根据请求时间查看对应信息。
