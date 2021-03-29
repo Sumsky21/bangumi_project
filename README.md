@@ -50,20 +50,20 @@ Prefix dict has been built successfully.
 
 # 项目结构
 
-/KG-QA：小程序源码
+`/KG-QA`：小程序源码
 
-/crawl：爬虫部分源码
+`/crawl`：爬虫部分源码
 
-main.py：API入口
+`main.py`：API入口（需要安装flask以运行API）
 
-QAmain.py：问答系统总入口，接收用户输入，返回推荐
+`QAmain.py`：问答系统总入口，接收用户输入，返回推荐
 
-Question_classifier.py：对问题进行关键词提取和分类
+`Question_classifier.py`：对问题进行关键词提取和分类
 
-Question_parser.py：对不同类问题进行分类转换，生成对应的查询语句
+`Question_parser.py`：对不同类问题进行分类转换，生成对应的查询语句
 
-Answer_searcher.py：对知识图谱进行查询，并对返回结果进行处理
+`Answer_searcher.py`：对知识图谱进行查询，并对返回结果进行处理
 
-Preprocess.py：对知识图谱中的信息进行处理，生成领域特定字典，用于问答系统中进行匹配
+`Preprocess.py`：对知识图谱中的信息进行处理，生成领域特定字典，用于问答系统中进行匹配
 
-testapi.py：本地测试API程序
+`testapi.py`：本地测试API程序
