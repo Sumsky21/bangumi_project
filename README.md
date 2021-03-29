@@ -5,7 +5,7 @@ By: @xinobu, @Braini-X and @Sumsky21
 
 # 项目介绍
 
-本项目从bangumi网站获取信息，构建了一个关于日本动画的知识图谱，并实现了基于该知识图谱的简单问答系统，能够完成简单的动画推荐任务。
+本项目从[bangumi](bangumi.tv)网站获取信息，构建了一个关于日本动画的知识图谱，并实现了基于该知识图谱的简单问答系统，能够完成简单的动画推荐任务。
 
 项目文件主要包括：
 
@@ -18,6 +18,8 @@ By: @xinobu, @Braini-X and @Sumsky21
 # 项目环境需求
 
 python3, jieba, rapidfuzz, py2neo, OpenCC
+
+小程序需使用[微信开发者工具](https://developers.weixin.qq.com/miniprogram/dev/devtools/download.html)进行开发和调试。
 
 # 项目使用方式
 
@@ -65,5 +67,3 @@ Answer_searcher.py：对知识图谱进行查询，并对返回结果进行处�
 Preprocess.py：对知识图谱中的信息进行处理，生成领域特定字典，用于问答系统中进行匹配
 
 testapi.py：本地测试API程序
-* 修改testapi.py中发送的数据，运行testapi.py，等待控制台输出结果
-* 如果testapi.py终端报错，可以访问 https://sumsky.xyz:5000/api/seeErrorlog 下载错误日志，日志文件中保存所有500 exception导致控制台输出的错误信息，可以根据请求时间查看对应信息。
